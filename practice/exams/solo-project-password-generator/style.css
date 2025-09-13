@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1C1C1C;
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+.container {
+    background-color: #273549;
+    padding: 50px 30px;
+    border-radius: 5px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+}
+
+/* h1 {
+    color: white;
+} */
+.subtext {
+    color: #4ADF86;
+    display: block;
+}
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"],
+input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #10B981;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#password {
+    font-weight: bold;
+}
