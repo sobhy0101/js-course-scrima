@@ -15,14 +15,18 @@ generateButton.addEventListener("click", function() {
     let includeNumbers = document.getElementById("includeNumbers").checked
     let includeSymbols = document.getElementById("includeSymbols").checked
 
-    let passwordOne = generatePassword()
-    let passwordTwo = generatePassword()
+    let passwordOne = generatePassword(includeUppercase, includeNumbers, includeSymbols)
+    let passwordTwo = generatePassword(includeUppercase, includeNumbers, includeSymbols)
     passwordOneEl.textContent = passwordOne
     passwordTwoEl.textContent = passwordTwo
 })
-function generatePassword() {
+function generatePassword(includeUppercase, includeNumbers, includeSymbols) {
     let password = ""
     let availableCharacters = []
+
+    // Always include lowercase letters
+    availableCharacters = availableCharacters.concat(characters.slice(26, 52))
+
     if (includeUppercase) {
         availableCharacters = availableCharacters.concat(characters.slice(0, 26))
     }
@@ -37,3 +41,14 @@ function generatePassword() {
     }
     return password
 }
+
+// Create a function that copys the password to clipboard when clicked
+passwordOneEl.addEventListener("click", function() {
+    navigator.clipboard.writeText(passwordOneEl.textContent)
+    document.getElementById("copy-notification").textContent = "Password 1 copied to clipboard!"
+})
+
+passwordTwoEl.addEventListener("click", function() {
+    navigator.clipboard.writeText(passwordTwoEl.textContent)
+    document.getElementById("copy-notification").textContent = "Password 2 copied to clipboard!"
+})
