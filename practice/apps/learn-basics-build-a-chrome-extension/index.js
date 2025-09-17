@@ -1,7 +1,6 @@
 let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
-// 2. Grab the unordered list and store it in a const variable called ulEl
 const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
@@ -11,7 +10,10 @@ inputBtn.addEventListener("click", function() {
 
 for (let i = 0; i < myLeads.length; i++) {
     ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+
 }
+
+
 
 ////////////////////////////////////////////////////////////////
 
@@ -34,3 +36,11 @@ for (let i = 0; i < myLeads.length; i++) {
 
 // // Finally, notifying the customer
 // console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+
+
+
+// ///////////// To edit the HTML elements using the DOM innerHTML with a single string containing the entire HTML element (opening tag, content, closing tag) and assign it to innerHTML  /////////////
+// const container = document.getElementById("container")
+
+// container.innerHTML = "<button>Buy!</button>" // adds a button inside the container div
+// ////////////////////////////////////////////////////////////////
