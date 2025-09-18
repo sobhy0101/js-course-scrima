@@ -1,36 +1,37 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    inputEl.value = ""
+    renderLeads()
 })
 
-// for (let i = 0; i < myLeads.length; i++) {
-//     // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
-//     // create element
-//     // set text content
-//     // append to ul
-//     const listedItem = document.createElement("li") // Using createElement method to create a new li element instead of using innerHTML
-//     listedItem.textContent = myLeads[i] // Setting the text content of the li element to the current lead qarray item
-//     ulEl.append(listedItem) // Appending the li element to the ul element using the append method
-// }
 
-// New Quiz:
-// 1. Create a variable, listItems, to hold all the HTML for the list items
-// Assign it to an empty string to begin with
-let listItems = ""
-for (let i = 0; i < myLeads.length; i++) {
-    // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
-    listItems += "<li>" + myLeads[i] + "</li>"
-    console.log(listItems)
+
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i < myLeads.length; i++) {
+        // Wrap the lead in an anchor tag (<a>) inside the <li>
+        // Can you make the link open in a new tab?
+        //listItems += "<li><a target='_blank' href='https://" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+    // There is a better way to do this instead of concatenating strings
+    // It's called template strings (template literals)
+    // With template strings, we can use backticks (`) instead of quotes (" or ')
+    // We can also use ${} to insert variables and expressions into the string
+    // This makes it easier to read and write HTML strings in JavaScript
+        listItems += `
+            <li>
+                <a target='_blank' href='https://${myLeads[i]}'>
+                    ${myLeads[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems  
 }
-// 3. Render the listItems inside the unordered list using ulEl.innerHTML
-ulEl.innerHTML = listItems
-
-
 
 
 ////////////////////////////////////////////////////////////////
