@@ -14,14 +14,6 @@ inputBtn.addEventListener("click", function() {
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        // Wrap the lead in an anchor tag (<a>) inside the <li>
-        // Can you make the link open in a new tab?
-        //listItems += "<li><a target='_blank' href='https://" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
-    // There is a better way to do this instead of concatenating strings
-    // It's called template strings (template literals)
-    // With template strings, we can use backticks (`) instead of quotes (" or ')
-    // We can also use ${} to insert variables and expressions into the string
-    // This makes it easier to read and write HTML strings in JavaScript
         listItems += `
             <li>
                 <a target='_blank' href='https://${myLeads[i]}'>
@@ -35,15 +27,20 @@ function renderLeads() {
 
 // ///////////// Template Strings Quiz /////////////
 
-// template strings/literals
+// // template strings/literals
 
-const recipient = "James"
-const sender = "Mike"
+// const recipient = "James"
+// const sender = "Mike"
 
-// Refactor the email string to use template strings
-const email = `Hey ${recipient}! How is it going? Cheers ${sender}`
+// const email = `
+// Hey ${recipient}!
 
-console.log(email)
+// How is it going?
+
+// Cheers ${sender}
+// `
+
+// console.log(email)
 
 ////////////////////////////////////////////////////////////////
 
