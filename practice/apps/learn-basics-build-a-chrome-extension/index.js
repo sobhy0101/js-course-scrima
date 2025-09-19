@@ -9,6 +9,15 @@ inputBtn.addEventListener("click", function() {
     renderLeads()
 })
 
+// Support saving with Enter key
+inputEl.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        myLeads.push(inputEl.value)
+        inputEl.value = ""
+        renderLeads()
+    }
+})
+
 
 
 function renderLeads() {
