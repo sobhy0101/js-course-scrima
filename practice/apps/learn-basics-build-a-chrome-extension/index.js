@@ -3,6 +3,27 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
+///////////////////  Local Storage ////////////////////////
+// Practice using localStorage
+// To test it out, open the browser console and type localStorage to see what is stored in localStorage or else go to Application tab > Local Storage
+// 1. Save a key-value pair in localStorage
+// 2. Refresh the page. Get the value and log it to the console
+// 3. Clear localStorage
+
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
+
+localStorage.setItem("My Leads", "www.google.com") // saves the key-value pair in localStorage
+let name = localStorage.getItem("My Leads") // retrieves the value from localStorage using the key
+console.log(name)
+
+localStorage.clear() // clears localStorage
+
+///////////////////// End of Local Storage ///////////////////////////
+
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
@@ -31,7 +52,7 @@ function renderLeads() {
             </li>
         `
     }
-    ulEl.innerHTML = listItems  
+    ulEl.innerHTML = listItems
 }
 
 // ///////////// Template Strings Quiz /////////////
