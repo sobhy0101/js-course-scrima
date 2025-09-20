@@ -1,10 +1,8 @@
-let myLeads = `["www.awesomelead.com"]` // a JSON string representing an array which uses ` instead of "
+let myLeads = ["www.awesomelead.com"] // Use this array to test the code below
 
-myLeads = JSON.parse(myLeads) // converts the JSON string to a JavaScript array
+myLeads = JSON.stringify(myLeads) // converts the array into a string
 
-myLeads.push("www.epiclead.com") // adds a new lead to the array
-
-console.log(myLeads)
+console.log(typeof myLeads) // Log out the type of myLeads
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
