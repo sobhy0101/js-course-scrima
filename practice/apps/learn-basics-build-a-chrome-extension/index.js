@@ -3,13 +3,7 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-
-// Get the leads from the localStorage - PS: JSON.parse()
-// Store it in a variable, leadsFromLocalStorage
-// Log out the variable
-
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-console.log(leadsFromLocalStorage)
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
@@ -126,3 +120,11 @@ function renderLeads() {
 // null       // Explicitly no value (developer sets)
 // undefined  // Variable declared but not assigned (JS sets)
 // NaN        // Not a Number (invalid numeric operation)
+
+////////////////// Quiz on Falsy values ///////////////////////////
+// console.log(  Boolean("")   ) // false
+// console.log(  Boolean("0")  ) // true
+// console.log(  Boolean(100)  ) // true
+// console.log(  Boolean(null) ) // false
+// console.log(  Boolean([0])  ) // true
+// console.log(  Boolean(-0)   ) // false
