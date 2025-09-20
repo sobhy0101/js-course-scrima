@@ -1,46 +1,25 @@
 
-let myLeads = `["www.awesomelead.com"]`
-
-// 1. Turn the myLeads string into an array
-myLeads = JSON.parse(myLeads)
-// 2. Push a new value to the array
-myLeads.push("www.lead2.com")
-// 3. Turn the array into a string again
-myLeads = JSON.stringify(myLeads)
-// 4. Console.log the string using typeof to verify that it's a string
-console.log(typeof myLeads)
-
+let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-///////////////////  Local Storage ////////////////////////
-
-
-localStorage.setItem("My Leads", "www.google.com") // saves the key-value pair in localStorage
-let name = localStorage.getItem("My Leads") // retrieves the value from localStorage using the key
-console.log(name)
-
-localStorage.clear() // clears localStorage
-
-///////////////////// End of Local Storage ///////////////////////////
-
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
     renderLeads()
+    console.log( localStorage.getItem("myLeads") )
 })
 
-// Support saving with Enter key
 inputEl.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         myLeads.push(inputEl.value)
         inputEl.value = ""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
         renderLeads()
     }
 })
-
-
 
 function renderLeads() {
     let listItems = ""
@@ -116,3 +95,14 @@ function renderLeads() {
 //     container.innerHTML = "<button onclick='buy()'>Buy!</button>" + "<p>Thank you for buying!</p>" // With this code, the button will remain after clicking it because we are overwriting the entire innerHTML of the container div
 //     container.innerHTML += "<p>Thank you for buying!</p>" // With this code, the button will disappear after clicking it because we are adding a new paragraph to the existing innerHTML of the container div
 //}
+
+///////////////////  Local Storage ////////////////////////
+
+
+// localStorage.setItem("My Leads", "www.google.com") // saves the key-value pair in localStorage
+// let name = localStorage.getItem("My Leads") // retrieves the value from localStorage using the key
+// console.log(name)
+
+// localStorage.clear() // clears localStorage
+
+///////////////////// End of Local Storage ///////////////////////////
