@@ -25,6 +25,7 @@ inputEl.addEventListener("keydown", function(event) {
         inputEl.value = ""
         localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
         renderLeads()
+        console.log( localStorage.getItem("myLeads") )
     }
 })
 
@@ -118,9 +119,10 @@ function renderLeads() {
 // truthy
 // falsy
 
-// false
-// 0
-// ""
-// null -> how you as a developer signalize emptiness
-// undefined -> how JavaScript signalizes emptiness
-// NaN -> Not a Number
+///////////////////// Falsy values ///////////////////////////
+// false      // The Boolean value false
+// 0          // The number zero
+// ""         // An empty string
+// null       // Explicitly no value (developer sets)
+// undefined  // Variable declared but not assigned (JS sets)
+// NaN        // Not a Number (invalid numeric operation)
