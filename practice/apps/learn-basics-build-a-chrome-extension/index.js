@@ -1,4 +1,11 @@
-let myLeads = []
+let myLeads = `["www.awesomelead.com"]` // a JSON string representing an array which uses ` instead of "
+
+myLeads = JSON.parse(myLeads) // converts the JSON string to a JavaScript array
+
+myLeads.push("www.epiclead.com") // adds a new lead to the array
+
+console.log(myLeads)
+
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
