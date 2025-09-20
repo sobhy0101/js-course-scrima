@@ -4,6 +4,13 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
+// Get the leads from the localStorage - PS: JSON.parse()
+// Store it in a variable, leadsFromLocalStorage
+// Log out the variable
+
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+console.log(leadsFromLocalStorage)
+
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
@@ -106,3 +113,14 @@ function renderLeads() {
 // localStorage.clear() // clears localStorage
 
 ///////////////////// End of Local Storage ///////////////////////////
+
+///////////////////// Truthy and Falsy ///////////////////////////
+// truthy
+// falsy
+
+// false
+// 0
+// ""
+// null -> how you as a developer signalize emptiness
+// undefined -> how JavaScript signalizes emptiness
+// NaN -> Not a Number
