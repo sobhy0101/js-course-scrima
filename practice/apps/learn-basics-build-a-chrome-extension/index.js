@@ -43,7 +43,7 @@ inputEl.addEventListener("keydown", function(event) {
         myLeads.push(inputEl.value)
         inputEl.value = ""
         localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
-        render(leads)
+        render(myLeads)
         console.log( localStorage.getItem("myLeads") )
     }
 })
