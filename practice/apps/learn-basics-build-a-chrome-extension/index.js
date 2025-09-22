@@ -1,27 +1,41 @@
 let myLeads = []
+let oldLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-
-deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()  // Clear all localStorage
-    myLeads = []          // Clear the myLeads array
-    renderLeads()        // Re-render the leads (which will now be empty)
-})
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(myLeads)
 }
+
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        listItems += `
+            <li>
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems
+}
+
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myLeads = []
+    render(myLeads)
+})
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
-    renderLeads()
-    console.log( localStorage.getItem("myLeads") )
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    render(myLeads)
 })
 
 inputEl.addEventListener("keydown", function(event) {
@@ -29,24 +43,10 @@ inputEl.addEventListener("keydown", function(event) {
         myLeads.push(inputEl.value)
         inputEl.value = ""
         localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
-        renderLeads()
+        render(leads)
         console.log( localStorage.getItem("myLeads") )
     }
 })
-
-function renderLeads() {
-    let listItems = ""
-        for (let i = 0; i < myLeads.length; i++) {
-            listItems += `
-                <li>
-                    <a target='_blank' href='https://${myLeads[i]}'>
-                        ${myLeads[i]}
-                    </a>
-                </li>
-            `
-        }
-    ulEl.innerHTML = listItems
-}
 
 // ///////////// Template Strings Quiz /////////////
 
