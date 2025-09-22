@@ -10,10 +10,13 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
-
+// add http:// to the beginning of the URL if not present
 function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
+        if (!leads[i].startsWith("http://") && !leads[i].startsWith("https://")) {
+            leads[i] = "https://" + leads[i]
+        }
         listItems += `
             <li>
                 <a target='_blank' href='${leads[i]}'>
