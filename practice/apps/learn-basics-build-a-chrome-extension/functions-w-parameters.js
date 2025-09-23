@@ -34,3 +34,6 @@ console.log( add(9, 102) )  // should log 111
 // An easy way to remember the difference between parameters and arguments is to think of parameters are inside of the function definition (they are part of the function declaration) and arguments are outside of the function (they are part of the function invocation).
 
 ////////////////////////////////////////////////////////////////
+
+// Reference image: https://typealias.com/img/social/guide-parameters-arguments.png
+// Or local path: guide-parameters-arguments.png
