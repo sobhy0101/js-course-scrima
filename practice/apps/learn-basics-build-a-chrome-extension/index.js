@@ -1,22 +1,28 @@
 let myLeads = []
-let oldLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+// 1. Grab the SAVE TAB button and store it in a tabBtn variable
+const tabBtn = document.getElementById("tab-btn")
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
-// add http:// to the beginning of the URL if not present
+
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+tabBtn.addEventListener("click", function() {
+    console.log(tabs[0].url)
+})
+
 function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
-        if (!leads[i].startsWith("http://") && !leads[i].startsWith("https://")) {
-            leads[i] = "https://" + leads[i]
-        }
         listItems += `
             <li>
                 <a target='_blank' href='${leads[i]}'>
@@ -39,16 +45,6 @@ inputBtn.addEventListener("click", function() {
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     render(myLeads)
-})
-
-inputEl.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        myLeads.push(inputEl.value)
-        inputEl.value = ""
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))  // Save the myLeads array to localStorage | PS: remember JSON.stringify()
-        render(myLeads)
-        console.log( localStorage.getItem("myLeads") )
-    }
 })
 
 // ///////////// Template Strings Quiz /////////////
