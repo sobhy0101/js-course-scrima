@@ -37,3 +37,14 @@ console.log( add(9, 102) )  // should log 111
 
 // Reference image: https://typealias.com/img/social/guide-parameters-arguments.png
 // Or local path: guide-parameters-arguments.png
+
+/////////////////////////// Functions with Arrays and parameters ///////////////////////////
+
+// Create a function, getFirst(arr), that returns the first item in the array
+let firstCard = getFirst([10, 2, 5])
+
+function getFirst(arr) {
+    return arr[0]
+}
+// Call it with an array as an argument to verify that it works
+console.log(firstCard)
