@@ -18,7 +18,7 @@ function renderImages() {
     for (let i = 0; i < imgs.length; i++){
         images += 
         `
-        <img class="team-img" src=${imgs[i]}>
+        <img alt="Team Member" class="team-img" src=${imgs[i]}>
         `
     }
     imageContainer.innerHTML = images;
