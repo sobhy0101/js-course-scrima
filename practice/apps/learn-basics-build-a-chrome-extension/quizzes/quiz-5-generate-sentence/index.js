@@ -1,3 +1,4 @@
+// Quiz 5: Generate Sentence
 // The generateSentence(desc, arr) takes two parameterer: a description and an array.
 // It should return a string based upon the description and array.
 
@@ -9,16 +10,36 @@
 
 // Use both a for loop and a template string to solve the challenge
 
-let largestCountries = ["China", "India", "USA"]
+// My answer:
+// let largestCountries = ["China", "India", "USA"]
 
-let bestFruits = ["Apples", "Bananas"]
+// let bestFruits = ["Apples", "Bananas"]
 
-function generateSentence(desc, arr) {
+// function generateSentence(desc, arr) {
     
-        // console.log(desc[i])
-        return `The ${arr.length} ${desc} are ${arr.join(", ")}`
+//         // console.log(desc[i])
+//         return `The ${arr.length} ${desc} are ${arr.join(", ")}`
+//     }
+
+
+// console.log(generateSentence("largest countries", ["China", "India", "USA"]))
+// console.log(generateSentence("best fruits", ["Apples, Bannas"]))
+
+///////////////////////////////////////
+
+// Instractor answer:
+function generateSentence(desc, arr) {
+    let baseString = `The ${arr.length} ${desc} are `
+    const lastIndex = arr.length - 1
+    for (let i = 0; i < arr.length; i++) {
+        if (i === lastIndex) {
+            baseString += arr[i]
+        } else {
+            baseString += arr[i] + ", "   
+        }
     }
+    return baseString
+}
 
-
-console.log(generateSentence("largest countries", ["China", "India", "USA"]))
-console.log(generateSentence("best fruits", ["Apples, Bannas"]))
+const sentence = generateSentence("highest mountains", ["Mount Everest", "K2"])
+console.log(sentence)
