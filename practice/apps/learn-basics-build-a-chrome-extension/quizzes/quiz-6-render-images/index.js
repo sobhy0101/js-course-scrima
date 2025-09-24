@@ -10,14 +10,18 @@ const imgs = [
 ]
 
 let imageContainer = document.getElementById("container")
-
+// This function runs the renderImages function three times, once for each image in the imgs array
+// Too much dom manipulation is bad for performance.
+// There is a better way to do this:
 function renderImages() {
+    let images = "";
     for (let i = 0; i < imgs.length; i++){
-        imageContainer.innerHTML += 
+        images += 
         `
         <img class="team-img" src=${imgs[i]}>
         `
     }
+    imageContainer.innerHTML = images;
 }
 
 renderImages()
