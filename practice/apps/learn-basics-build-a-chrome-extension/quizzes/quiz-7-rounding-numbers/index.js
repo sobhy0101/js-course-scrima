@@ -2,7 +2,7 @@
 // Round the price in the button down to two decimal places.
 // Don't know which method to use? Google it!
 
-const totalPrice = 420.69235632455
+const totalPrice = "420.69235632455"
 const btn = document.getElementById("purchase-btn")
 // My answer:
 // Math.floor(totalPrice * 100) / 100 truncates the value to two decimals,
@@ -13,4 +13,8 @@ const btn = document.getElementById("purchase-btn")
 // Instructor's answer:
 // totalPrice.toFixed(2) always returns a string with exactly two decimal places,
 // making it the preferred method for displaying currency values.
-btn.textContent = `Buy €${ totalPrice.toFixed(2) }`
+
+// Challenge:
+// The toFixed() method doesn't work anymore. Can you make it work?
+// Google the error message if you're unsure about how to do it
+btn.textContent = `Buy €${ Number(totalPrice).toFixed(2) }`
