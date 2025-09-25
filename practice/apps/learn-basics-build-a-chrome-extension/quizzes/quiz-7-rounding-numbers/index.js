@@ -1,3 +1,4 @@
+// Quiz 7: Rounding Numbers
 // Challenge:
 // Round the price in the button down to two decimal places.
 // Don't know which method to use? Google it!
@@ -14,7 +15,7 @@ const btn = document.getElementById("purchase-btn")
 // totalPrice.toFixed(2) always returns a string with exactly two decimal places,
 // making it the preferred method for displaying currency values.
 
-// Challenge:
+// Quiz 8:
 // The toFixed() method doesn't work anymore. Can you make it work?
 // Google the error message if you're unsure about how to do it
 btn.textContent = `Buy €${ Number(totalPrice).toFixed(2) }`
