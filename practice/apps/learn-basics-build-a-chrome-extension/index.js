@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebas
 import { getDatabase,
         ref,
         set,
-        push } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
+        push,
+        onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL,
@@ -16,6 +17,10 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
+
+onValue(referenceInDB, function(snapshot) {
+    console.log(snapshot.val())
+})
 
 function render(leads) {
     let listItems = ""
