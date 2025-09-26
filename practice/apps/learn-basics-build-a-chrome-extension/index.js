@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js"
-import { getDatabase } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL,
@@ -137,3 +137,24 @@ inputEl.addEventListener("keydown", function(event) {
 // console.log(  Boolean(null) ) // false
 // console.log(  Boolean([0])  ) // true
 // console.log(  Boolean(-0)   ) // false
+
+///////////////////// End of Truthy and Falsy ///////////////////////////
+
+///////////////////// Firebase Realtime Database ///////////////////////////
+
+// To write data to the database, we use the set() function along with a reference to the location in the database where we want to store the data. The ref() function is used to create this reference.
+
+// Example: Writing data to the database
+
+// const testRef = ref(database, "test")
+// set(testRef, {
+//     message: "Hello World!",
+//     message2: "Hello World Again!",
+//     test: 12 + 2,
+// })
+// .then(() => {
+//     console.log("Data uploaded successfully!")
+// })
+// .catch((error) => {
+//     console.error("Upload failed:", error)
+// })
