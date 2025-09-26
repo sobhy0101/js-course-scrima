@@ -1,5 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js"
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
+import { getDatabase,
+        ref,
+        set,
+        push } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL,
@@ -7,6 +10,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
+const referenceInDB = ref(database, "leads")
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
@@ -35,13 +39,14 @@ deleteBtn.addEventListener("dblclick", function() {
 })
 
 inputBtn.addEventListener("click", function() {
-    console.log(inputEl.value)
+    push(referenceInDB, inputEl.value)
     inputEl.value = ""
 })
 
 inputEl.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        console.log(inputEl.value)
+        // Challenge: Import the 'push' function and modify the line above to push inputEl.value to the referenceInDB in the database
+        push(referenceInDB, inputEl.value)
         inputEl.value = ""
     }
 })
@@ -150,10 +155,18 @@ inputEl.addEventListener("keydown", function(event) {
 // set(testRef, {
 //     message: "Hello World!",
 //     message2: "Hello World Again!",
-//     test: 12 + 2,
+//     test: 12 / 2,
+// })
+
+// const addToDB = ref(database, "messages")
+// set(addToDB, {
+//     message: "Hello World!",
+//     message2: "Hello World Again!",
+//     test: 12 / 2,
 // })
 // .then(() => {
 //     console.log("Data uploaded successfully!")
+//     console.log("testRef key:", testRef.key) // Logs the key of the reference
 // })
 // .catch((error) => {
 //     console.error("Upload failed:", error)
