@@ -40,16 +40,20 @@ ul {
 }
 
 li {
-    margin-bottom: 25px;
+    height: fit-content;
+    background: #5f9341;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 li a {
     text-decoration: none;
     min-width: 200px;
     max-width: 300px;
-    background: green;
+    
     border-radius: 5px;
-    padding: 10px 15px;
+    
     color: white;
     font-weight: 700;
     
