@@ -176,3 +176,16 @@ inputEl.addEventListener("keydown", function(event) {
 // .catch((error) => {
 //     console.error("Upload failed:", error)
 // })
+
+////////////////// Turn an object into an array ///////////////////////////
+const loginCredentials = {
+    "rafidhoda": "BestPassword123",
+    "shahrukhkhan": "InBigCitiesSmallThingsHappen",
+    "jackblack": "ThisIsNotTheGreatestPasswordInTheWorld"
+}
+
+console.log(Object.keys(loginCredentials)) // Gets all the keys of the object and returns them as an array
+console.log(Object.values(loginCredentials)) // Gets all the values of the object and returns them as an array
+console.log(Object.entries(loginCredentials)) // Gets all the key-value pairs of the object and returns them as an array of arrays
+
+///////////////////// End of turning an object into an array ///////////////////////////
