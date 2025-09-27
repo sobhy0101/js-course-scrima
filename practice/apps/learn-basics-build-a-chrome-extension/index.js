@@ -19,7 +19,10 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
 onValue(referenceInDB, function(snapshot) {
-    console.log(snapshot.val())
+    const snapshotValues = snapshot.val()
+    // Challenge: Create a const called 'leads' which is an array containing the values inside of the snapshotValues object
+    const leads = Object.values(snapshotValues)
+    console.log(leads)
 })
 
 function render(leads) {
@@ -50,7 +53,6 @@ inputBtn.addEventListener("click", function() {
 
 inputEl.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        // Challenge: Import the 'push' function and modify the line above to push inputEl.value to the referenceInDB in the database
         push(referenceInDB, inputEl.value)
         inputEl.value = ""
     }
@@ -177,15 +179,15 @@ inputEl.addEventListener("keydown", function(event) {
 //     console.error("Upload failed:", error)
 // })
 
-////////////////// Turn an object into an array ///////////////////////////
-const loginCredentials = {
-    "rafidhoda": "BestPassword123",
-    "shahrukhkhan": "InBigCitiesSmallThingsHappen",
-    "jackblack": "ThisIsNotTheGreatestPasswordInTheWorld"
-}
+// ////////////////// Turn an object into an array ///////////////////////////
+// const loginCredentials = {
+//     "rafidhoda": "BestPassword123",
+//     "shahrukhkhan": "InBigCitiesSmallThingsHappen",
+//     "jackblack": "ThisIsNotTheGreatestPasswordInTheWorld"
+// }
 
-console.log(Object.keys(loginCredentials)) // Gets all the keys of the object and returns them as an array
-console.log(Object.values(loginCredentials)) // Gets all the values of the object and returns them as an array
-console.log(Object.entries(loginCredentials)) // Gets all the key-value pairs of the object and returns them as an array of arrays
+// console.log(Object.keys(loginCredentials)) // Gets all the keys of the object and returns them as an array
+// console.log(Object.values(loginCredentials)) // Gets all the values of the object and returns them as an array
+// console.log(Object.entries(loginCredentials)) // Gets all the key-value pairs of the object and returns them as an array of arrays
 
-///////////////////// End of turning an object into an array ///////////////////////////
+// ///////////////////// End of turning an object into an array ///////////////////////////
