@@ -3,7 +3,8 @@ import { getDatabase,
         ref,
         set,
         push,
-        onValue } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
+        onValue,
+        remove } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: import.meta.env.VITE_DATABASE_URL,
@@ -19,10 +20,18 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
 onValue(referenceInDB, function(snapshot) {
-    const snapshotValues = snapshot.val()
-    // Challenge: Create a const called 'leads' which is an array containing the values inside of the snapshotValues object
-    const leads = Object.values(snapshotValues)
-    console.log(leads)
+    const snapshotDoesExist = snapshot.exists()
+    if (snapshotDoesExist) {
+        const snapshotValues = snapshot.val()
+        const leads = Object.values(snapshotValues)
+        render(leads)
+    } else {
+        ulEl.innerHTML = `
+            <li>
+                No leads saved yet
+            </li>
+        `
+    }
 })
 
 function render(leads) {
@@ -34,7 +43,7 @@ function render(leads) {
         listItems += `
             <li>
                 <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                  🔲  ${leads[i]}
                 </a>
             </li>
         `
@@ -43,7 +52,8 @@ function render(leads) {
 }
 
 deleteBtn.addEventListener("dblclick", function() {
-
+    remove(referenceInDB)
+    ulEl.innerHTML = ""
 })
 
 inputBtn.addEventListener("click", function() {

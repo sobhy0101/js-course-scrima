@@ -33,13 +33,20 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 li a {
-    color: #5f9341;
     text-decoration: none;
+    min-width: 200px;
+    max-width: 300px;
+    background: green;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: 700;
+    
 }
 li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
