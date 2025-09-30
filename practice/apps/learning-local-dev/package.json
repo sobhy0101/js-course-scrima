@@ -1,5 +1,5 @@
 {
-  "name": "Scrim-s0272kd",
+  "name": "scrim-s0272kd",
   "description": "https://scrimba.com/learn-javascript-c0v/~01c",
   "scripts": {
     "start": "vite",
@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite": "latest"
+    "vite": ">=5.4.20"
   },
   "devDependencies": {}
 }
