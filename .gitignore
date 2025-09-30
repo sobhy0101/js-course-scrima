@@ -94,3 +94,55 @@ jspm_packages/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Compressed files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Vite specific
+.vite/
+*.local
+
+# Testing
+.nyc_output/
+coverage/
+*.lcov
+
+# Documentation builds
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# Package manager lock files (if using different managers)
+pnpm-lock.yaml
+yarn.lock
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Development tools
+.eslintcache
+.stylelintcache
+.parcel-cache
