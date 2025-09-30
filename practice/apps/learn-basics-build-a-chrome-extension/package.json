@@ -1,5 +1,5 @@
 {
-  "name": "Scrim-s0jqj8",
+  "name": "scrim-s0jqj8",
   "description": "https://scrimba.com/learn-javascript-c0v/~03m",
   "scripts": {
     "start": "vite",
@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite": "latest"
+    "vite": ">=5.4.20"
   },
   "devDependencies": {}
 }
