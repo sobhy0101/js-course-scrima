@@ -1,5 +1,5 @@
 {
-  "name": "Scrim-s06dgbl",
+  "name": "scrim-firebase-learn",
   "description": "https://scrimba.com/learn-javascript-c0v/~06sh",
   "scripts": {
     "start": "vite",
@@ -8,7 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vite": "latest"
+    "vite": "5.4.20"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vite": "5.4.20",
+    "@vitejs/plugin-react": "latest"
+  }
 }
