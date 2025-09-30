@@ -5,7 +5,7 @@ import { getDatabase,
 
 const firebaseConfig = {
     databaseURL: "https://birthday-app---scrimba-default-rtdb.europe-west1.firebasedatabase.app/",
-    databaseAPIKey: "AIzaSyDPCLO6S6T6x7SCyH-jNXjZ-MHAuYwxKpg"
+    databaseAPIKey: "" // Enter your API Key here
 }
 
 const app = initializeApp(firebaseConfig)
