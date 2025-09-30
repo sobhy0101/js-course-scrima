@@ -10,5 +10,7 @@
   "dependencies": {
     "vite": ">=5.4.20"
   },
-  "devDependencies": {}
+  "devDependencies": {
+     "vite": ">=5.4.20"
+  }
 }
