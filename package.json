@@ -24,11 +24,8 @@
   ],
   "author": "Mahmoud Sobhy",
   "license": "MIT",
-  "dependencies": {
-    "vite": "^5.4.20"
-  },
   "devDependencies": {
-    "vite": "^5.4.20"
+    "vite": "^7.1.7"
   },
   "engines": {
     "node": ">=14.0.0",
