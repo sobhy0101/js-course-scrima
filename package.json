@@ -1,0 +1,37 @@
+{
+  "name": "learn-javascript-scrimba-course",
+  "version": "1.0.0",
+  "description": "Interactive JavaScript projects built while following the Learn JavaScript Course from Scrimba",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite --host",
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite --host --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sobhy0101/javascript-scrimba-course"
+  },
+  "keywords": [
+    "javascript",
+    "scrimba",
+    "learning",
+    "web-development",
+    "vite",
+    "projects"
+  ],
+  "author": "Mahmoud Sobhy",
+  "license": "MIT",
+  "dependencies": {
+    "vite": "^5.4.20"
+  },
+  "devDependencies": {
+    "vite": "^5.4.20"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
