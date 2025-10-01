@@ -78,10 +78,15 @@ header {
     justify-content: space-between;
 }
 
-.nav-brand {
+.nav-left {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -103,6 +108,23 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.website-author {
+    font-size: var(--font-size-lg);
+    color: var(--bg-primary);
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-right a:hover .website-author {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .mobile-menu-toggle {
@@ -758,8 +780,12 @@ footer a:hover {
         padding: var(--spacing-md);
     }
     
-    .nav-brand {
+    .nav-left {
         gap: var(--spacing-md);
+    }
+    
+    .nav-right {
+        margin-left: var(--spacing-md);
     }
     
     .website-title {
