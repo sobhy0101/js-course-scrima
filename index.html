@@ -3,75 +3,149 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Interactive JavaScript projects and learning journey following the Scrimba course">
         <title>Learn JavaScript - Scrimba Course</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" class="favicon" href="images/javascript-icon.svg">
+        <link rel="icon" type="image/svg+xml" href="images/javascript-icon.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-        <nav>
-            <img src="images/javascript-icon.svg" class="favicon" alt="JavaScript Icon" width="120px" height="120px">
-            <h1 class="website-title">Learn JavaScript</h1>
-        </nav>
-        <main class="main">
-            <aside class="sidebar">
-                <h2>Topics Covered</h2>
-                <ul>
-                    <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">Variables</a></li>
-                    <li><a href="https://www.w3schools.com/js/js_datatypes.asp" target="_blank" rel="noopener noreferrer">Data Types</a></li>
-                    <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" rel="noopener noreferrer">Functions</a></li>
-                    <li><a href="https://www.w3schools.com/js/js_objects.asp" target="_blank" rel="noopener noreferrer">Objects</a></li>
-                    <li><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="noopener noreferrer">DOM Manipulation</a></li>
-                </ul>
-            </aside>
-            <div class="content">
-                <section class="welcome-to-learn-js">
-                    <h2>Welcome to the Learn JavaScript Course!</h2>
-                    <p>This course is designed to take you from a beginner to a proficient JavaScript developer. You'll learn the fundamentals of JavaScript, how to manipulate the DOM, and build interactive web applications.</p>
-                    <h4>The Apps</h4>
-                    <ul class="apps-list">
-                        <li>
-                            <a href="practice/apps/learn-basics-the-black-jack-game/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/blackjack-game-photo.webp" alt="Blackjack Game Photo">
-                                <p>Blackjack Game</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="practice/apps/learn-basics-and-passenger-counting-app/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/passenger-counting-app-photo.webp" alt="Passenger Counting App Photo">
-                                <p>Passenger Counting App</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="practice/exams/solo-project-basketball-scoreboard/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/basketball-scoreboard-photo.webp" alt="Basketball Scoreboard Photo">
-                                <p>Basketball Scoreboard</p>
-                                <p class="caption">Solo Project</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="practice/exams/solo-project-password-generator/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/password-generator-photo.png" alt="Password Generator Photo">
-                                <p>Password Generator</p>
-                                <p class="caption">Solo Project</p>
-                            </a>
-                        </li>                        <li>
-                            <a href="practice/apps/learn-basics-build-a-chrome-extension/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/google-chrome-extension.png" alt="Google Chrome Extension Photo">
-                                <p>Google Chrome Extension</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="practice/exams/solo-project-unit-converter/index.html" target="_blank" rel="noopener noreferrer">
-                                <img src="images/unit-converter-image.png" alt="Unit Converter Photo">
-                                <p>Unit Converter</p>
-                                <p class="caption">Solo Project</p>
-                            </a>
-                        </li>
-                    </ul>
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <img src="images/javascript-icon.svg" class="logo" alt="JavaScript Icon">
+                    <h1 class="website-title">Learn JavaScript</h1>
+                </div>
+                <button class="mobile-menu-toggle" type="button" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="main-content">
+                <div class="content">
+                <section class="hero">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Welcome to My JavaScript Learning Journey!</h2>
+                        <p class="hero-description">Following the Scrimba JavaScript course, I'm building interactive projects that demonstrate core concepts like DOM manipulation, event handling, and modern ES6+ features.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Hours Learning</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">More to Go!</span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+                <section class="projects">
+                    <h3 class="section-title">Featured Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <a href="practice/apps/learn-basics-the-black-jack-game/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/blackjack-game-photo.webp" alt="Blackjack Game Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Blackjack Game</h4>
+                                    <p class="project-desc">Interactive card game with JavaScript logic</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="practice/apps/learn-basics-and-passenger-counting-app/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/passenger-counting-app-photo.webp" alt="Passenger Counter App Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Passenger Counter</h4>
+                                    <p class="project-desc">First DOM manipulation project</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card featured">
+                            <a href="practice/exams/solo-project-basketball-scoreboard/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/basketball-scoreboard-photo.webp" alt="Basketball Scoreboard Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Basketball Scoreboard</h4>
+                                    <p class="project-desc">Solo project with score tracking</p>
+                                    <span class="project-badge">Solo Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card featured">
+                            <a href="practice/exams/solo-project-password-generator/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/password-generator-photo.png" alt="Password Generator Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Password Generator</h4>
+                                    <p class="project-desc">Secure password creation tool</p>
+                                    <span class="project-badge">Solo Project</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card">
+                            <a href="practice/apps/learn-basics-build-a-chrome-extension/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/google-chrome-extension.png" alt="Chrome Extension Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Chrome Extension</h4>
+                                    <p class="project-desc">Real browser extension development</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="project-card featured">
+                            <a href="practice/exams/solo-project-unit-converter/index.html" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="images/unit-converter-image.png" alt="Unit Converter Screenshot">
+                                    <div class="project-overlay">
+                                        <span class="project-demo">View Demo →</span>
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h4 class="project-title">Unit Converter</h4>
+                                    <p class="project-desc">Multi-unit conversion calculator</p>
+                                    <span class="project-badge">Solo Project</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="about-section">
-                    <!-- <h1>Learn JavaScript – Scrimba Course</h1> -->
-                    <section class="badges">
+                    <div class="about-content">
+                        <div class="badges">
                         <a href="https://www.w3.org/html/" target="_blank" rel="noopener noreferrer">
                             <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=html5&logoColor=white" alt="HTML5" />
                         </a>
@@ -102,11 +176,13 @@
                         <hr />
                         <h2>🚀 Projects</h2>
                         <ul>
+                            <!-- Add the remaining projects -->
                             <li><strong>Passenger Counter App</strong> – First project, learning variables and DOM manipulation.</li>
                             <li><strong>Blackjack Game</strong> – Practice with conditionals, arrays, and event listeners.</li>
                             <li><strong>Chrome Extension</strong> – Real-world project deployed to the browser.</li>
+                            <li><strong>Solo Projects</strong> – Basketball Scoreboard, Password Generator, and Unit Converter to apply learned concepts independently.</li>
                         </ul>
-                        <p>More projects will be added as I progress through the course.</p>
+                        <i><u>More projects will be added as I progress through the course.</u></i>
                         <hr />
                         <h2>🛠️ Tech Stack</h2>
                         <ul>
@@ -125,11 +201,151 @@ npm install
 npm start
                             </code>
                         </pre>
-                    </section>
+                    </div>
                 </section>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="sidebar-left">
+                            <div class="topics-section">
+                                <h3>Learning Topics</h3>
+                                <nav class="topic-nav">
+                                    <a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">📝</span>
+                                        <span class="topic-text">Variables & Data Types</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">⚡</span>
+                                        <span class="topic-text">Functions & Scope</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_objects.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🏗️</span>
+                                        <span class="topic-text">Objects & Arrays</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_if_else.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🔀</span>
+                                        <span class="topic-text">Conditionals & Logic</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🔄</span>
+                                        <span class="topic-text">Loops & Iteration</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🌐</span>
+                                        <span class="topic-text">DOM Manipulation</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_events.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🎯</span>
+                                        <span class="topic-text">Event Handling</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_es6.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🚀</span>
+                                        <span class="topic-text">ES6+ Features</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_async.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">⏰</span>
+                                        <span class="topic-text">Async JavaScript</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🔗</span>
+                                        <span class="topic-text">APIs & Fetch</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_errors.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">🐛</span>
+                                        <span class="topic-text">Error Handling</span>
+                                    </a>
+                                    <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank" rel="noopener noreferrer">
+                                        <span class="topic-icon">📋</span>
+                                        <span class="topic-text">JSON & Data</span>
+                                    </a>
+                                </nav>
+                            </div>
+                            
+                            <div class="quick-links">
+                                <h4>Quick Links</h4>
+                                <a href="https://scrimba.com/learn-javascript-c0v" target="_blank" rel="noopener noreferrer" class="quick-link">
+                                    📚 Scrimba Course
+                                </a>
+                                <a href="https://github.com/sobhy0101/javascript-scrimba-course/" target="_blank" rel="noopener noreferrer" class="quick-link">
+                                    🔗 GitHub Repository
+                                </a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="quick-link">
+                                    📖 MDN JavaScript Docs
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-right">
+                            <div class="progress-section">
+                                <h4>Learning Progress</h4>
+                                <div class="progress-item">
+                                    <span class="progress-label">JavaScript Fundamentals</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%;"></div>
+                                    </div>
+                                    <span class="progress-percent">100%</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span class="progress-label">DOM & Event Handling</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                    <span class="progress-percent">75%</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span class="progress-label">ES6+ & Modern JS</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%;"></div>
+                                    </div>
+                                    <span class="progress-percent">60%</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span class="progress-label">Async & APIs</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%;"></div>
+                                    </div>
+                                    <span class="progress-percent">40%</span>
+                                </div>
+                                <div class="progress-item">
+                                    <span class="progress-label">Advanced Concepts</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 25%;"></div>
+                                    </div>
+                                    <span class="progress-percent">25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </main>
         <footer>
+            <!-- Add my social media links and contacts with icons and links -->
+            <h4>Connect with Me</h4>
+            <div class="social-links">
+                <a href="https://facebook.com/sobhydesign" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook social-icon" aria-label="Facebook"></i>
+                </a>
+                <a href="https://twitter.com/sobhy0101" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter social-icon" aria-label="Twitter"></i>
+                </a>
+                <a href="https://github.com/sobhy0101" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github social-icon" aria-label="GitHub"></i>
+                </a>
+                <a href="https://linkedin.com/in/sobhy0101" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin social-icon" aria-label="LinkedIn"></i>
+                </a>
+                <a href="mailto:sobhydesign@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope social-icon" aria-label="Email"></i>
+                </a>
+                <a href="tel:+201006688324" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-phone social-icon" aria-label="Phone"></i>
+                </a>
+                <a href="https://wa.me/201006688324" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp social-icon" aria-label="WhatsApp"></i>
+                </a>
+            </div>
             <p>&copy; <span id="copyright-year"></span> Mike Sobhy - Learn JavaScript Course. All rights reserved.</p>
         </footer>
 
