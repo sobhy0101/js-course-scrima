@@ -1,24 +1,24 @@
-// Objects - store data in-depth - composite / complex data type
-// key-value pairs
+// // Objects - store data in-depth - composite / complex data type
+// // key-value pairs
 
-let course = {
-    title: "Learn CSS Grid for free",
-    lessons: 16,
-    creator: "Per Harald Borgen",
-    length: 63,
-    level: 2,
-    isFree: true,
-    tags: ["html", "css", "grid" ],
-}
+// let course = {
+//     title: "Learn CSS Grid for free",
+//     lessons: 16,
+//     creator: "Per Harald Borgen",
+//     length: 63,
+//     level: 2,
+//     isFree: true,
+//     tags: ["html", "css", "grid" ],
+// }
 
  
-console.log( course.isFree ); // dot notation
-console.log( course["length"] ); // bracket notation
-console.log( course.title ); // dot notation
-console.log( course.tags[0] ); // bracket notation for array inside object
-console.log( course.tags[1] ); // bracket notation for array inside object
-console.log( course.tags[2] ); // bracket notation for array inside object
-console.log( course.tags ); // dot notation
+// console.log( course.isFree ); // dot notation
+// console.log( course["length"] ); // bracket notation
+// console.log( course.title ); // dot notation
+// console.log( course.tags[0] ); // bracket notation for array inside object
+// console.log( course.tags[1] ); // bracket notation for array inside object
+// console.log( course.tags[2] ); // bracket notation for array inside object
+// console.log( course.tags ); // dot notation
 
 
 ///////////////////////////////////////////////////////////////////
@@ -35,6 +35,8 @@ let castleListing = {
         tags: ["castles", "UK", "Europe", ],
         images: ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg", ]
 }
+
+console.log("Castle Listing");
 
 console.log( castleListing.title );
 

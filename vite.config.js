@@ -19,7 +19,8 @@ export default defineConfig({
         'chrome-extension': resolve(__dirname, 'practice/apps/learn-basics-build-a-chrome-extension/index.html'),
         'basketball-scoreboard': resolve(__dirname, 'practice/exams/solo-project-basketball-scoreboard/index.html'),
         'password-generator': resolve(__dirname, 'practice/exams/solo-project-password-generator/index.html'),
-        'unit-converter': resolve(__dirname, 'practice/exams/solo-project-unit-converter/index.html')
+        'unit-converter': resolve(__dirname, 'practice/exams/solo-project-unit-converter/index.html'),
+        'grok-quizzes': resolve(__dirname, 'practice/exams/grok-quizzes/index.html')
       }
     }
   }

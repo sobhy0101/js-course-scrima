@@ -214,17 +214,17 @@ let resetBtn = document.getElementById("reset-btn") // get the reset button elem
 
 
 function increment() {
-    count++
+    count++ // increment the count variable by 1
     countEl.innerText = count // update the count element text to reflect the new count
 }
 
 function save() {
     let countStr = count + " | "
-    saveEl.textContent += countStr
+    saveEl.textContent += countStr // append the countStr to the saveEl
 }
 function reset() {
-    count = 0
-    countEl.textContent = 0 // reset the saved counts display
-    saveEl.textContent = "Saved Counts: "
+    count = 0 
+    countEl.textContent = 0 // reset the count display to 0
+    saveEl.textContent = "Saved Counts: " // reset the saved counts display
 }
 

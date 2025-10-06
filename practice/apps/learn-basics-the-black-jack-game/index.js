@@ -1,4 +1,3 @@
-// 2. Create the player object. Give it two keys, name and chips, and set their values
 let player = {
     name: "Mike",
     chips: 124
@@ -11,7 +10,6 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
-// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
 let playerEl = document.getElementById("player-el")
 
 // let playerName = "Mike"
@@ -25,7 +23,6 @@ let playerEl = document.getElementById("player-el")
 // Properties are defined as key-value pairs, separated by commas
 // We can access the properties of an object using dot notation (objectName.propertyName)
 
-// 4. Render the player's name and chips in playerEl
 playerEl.textContent = player.name + ": $" + player.chips // Using dot notation to access the properties of the player object
 //playerEl.textContent = playerName + ": $" + playerChips // --- IGNORE ---
 
